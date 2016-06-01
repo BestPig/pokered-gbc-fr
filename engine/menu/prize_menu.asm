@@ -165,8 +165,8 @@ PrintPrizePrice:
 	call PrintBCDNumber
 	ret
 
-.CoinString:
-	db "COIN@"
+.CoinString
+	db "JETONS@"
 
 .SixSpacesString:
 	db "      @"

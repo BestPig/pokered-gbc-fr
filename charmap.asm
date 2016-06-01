@@ -226,6 +226,15 @@ charmap "w", $B6
 charmap "x", $B7
 charmap "y", $B8
 charmap "z", $B9
+charmap "é", $BC
+charmap "ô", $C9
+charmap "n'", $D9
+charmap "'", $E0
+charmap "-", $E3
+charmap "+", $E4
+charmap "'m", $E5
+charmap "?", $E6
+charmap "!", $E7
 charmap ".", $E8
 
 charmap "▶", $ED
