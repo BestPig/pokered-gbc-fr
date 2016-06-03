@@ -112,8 +112,8 @@ LeaguePCShowMon:
 	call PrintNumber
 	jpba HoFDisplayMonInfo
 
-HallOfFameNoText:
-	db "HALL OF FAME No   @"
+HallOfFameNoText: ; 76670 (1d:6670)
+	db " CELEBRITE No.    @"
 
 AccessedHoFPCText:
 	TX_FAR _AccessedHoFPCText
