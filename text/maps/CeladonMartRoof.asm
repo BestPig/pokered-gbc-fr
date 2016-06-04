@@ -16,14 +16,14 @@ _CeladonMartRoofText_484f3::
 _CeladonMartRoofText_484f9::
 	text "<PLAYER> received"
 	line "@"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text "!@@"
 
 _CeladonMartRoofText_484fe::
 	text ""
 
 	para "@"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text " contains"
 	line "ICE BEAM!"
 
@@ -43,14 +43,14 @@ _CeladonMartRoofText_48504::
 _CeladonMartRoofText_4850a::
 	text "<PLAYER> received"
 	line "@"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text "!@@"
 
 _CeladonMartRoofText_4850f::
 	text ""
 
 	para "@"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text " contains"
 	line "ROCK SLIDE!"
 
@@ -126,7 +126,7 @@ _VendingMachineText4::
 	done
 
 _VendingMachineText5::
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text ""
 	line "popped out!"
 	done

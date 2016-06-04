@@ -42,7 +42,7 @@ _TM41PreText::
 _ReceivedTM41Text::
 	text "<PLAYER> received"
 	line "@"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text "!@@"
 
 _TM41ExplanationText::

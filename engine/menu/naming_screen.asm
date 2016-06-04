@@ -39,8 +39,8 @@ AskName:
 	pop hl
 	pop af
 	ld [wUpdateSpritesEnabled], a
-	ld a, [wcf4b]
-	cp "@"
+	ld a, [wcf50]
+	cp $50
 	ret nz
 .declinedNickname
 	ld d, h
@@ -63,7 +63,7 @@ DisplayNameRaterScreen:
 	call GBPalWhiteOutWithDelay3
 	call RestoreScreenTilesAndReloadTilePatterns
 	call LoadGBPal
-	ld a, [wcf4b]
+	ld a, [wcf50]
 	cp "@"
 	jr z, .playerCancelled
 	ld hl, wPartyMonNicks
@@ -111,8 +111,8 @@ DisplayNamingScreen:
 	ld [wMenuWatchedKeys], a
 	ld a, 7
 	ld [wMaxMenuItem], a
-	ld a, "@"
-	ld [wcf4b], a
+	ld a, $50
+	ld [wcf50], a
 	xor a
 	ld hl, wNamingScreenSubmitName
 	ld [hli], a
@@ -160,7 +160,7 @@ DisplayNamingScreen:
 
 .submitNickname
 	pop de
-	ld hl, wcf4b
+	ld hl, wcf50
 	ld bc, NAME_LENGTH
 	call CopyData
 	call GBPalWhiteOutWithDelay3
@@ -382,7 +382,7 @@ PrintNicknameAndUnderscores: ; 68b1 (1:68b1)
 	lb bc, 1, 10
 	call ClearScreenArea
 	coord hl, 10, 2
-	ld de, wcf4b
+	ld de, wcf50
 	call PlaceString
 	coord hl, 10, 3
 	ld a, [wNamingScreenType]
@@ -458,9 +458,9 @@ Handakutens:
 	db "ハパ", "ヒピ", "フプ", "へぺ", "ホポ"
 	db $ff
 
-; calculates the length of the string at wcf4b and stores it in c
-CalcStringLength:
-	ld hl, wcf4b
+; calculates the length of the string at wcf50 and stores it in c
+CalcStringLength: ; 68eb (1:68eb)
+	ld hl, wcf50
 	ld c, $0
 .loop
 	ld a, [hl]

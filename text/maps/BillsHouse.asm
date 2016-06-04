@@ -56,7 +56,7 @@ _BillThankYouText::
 _SSTicketReceivedText::
 	text "<PLAYER> received"
 	line "an @"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text "!@@"
 
 _SSTicketNoRoomText::

@@ -1432,12 +1432,13 @@ wExpAmountGained:: ; cf4b
 ; 2-byte big-endian number
 ; the total amount of exp a mon gained
 
-wcf4b:: ds 2 ; storage buffer for various strings
+	ds 2
 
 wGainBoostedExp:: ; cf4d
 	ds 1
 
-	ds 2
+wcf4d:: ds 2 ; storage buffer for various strings
+	
 
 wcf50:: ds 15 ; storage buffer for various strings
 
@@ -1582,9 +1583,9 @@ wPlayerMoveMaxPP:: ; cfd7
 wEnemyMonSpecies2:: ; cfd8
 	ds 1
 wBattleMonSpecies2:: ; cfd9
-	ds 1
+	ds 6
 
-wEnemyMonNick:: ds NAME_LENGTH ; cfda
+wEnemyMonNick:: ds 6 ; cfdf
 
 wEnemyMon:: battle_struct wEnemyMon ; cfe5
 
@@ -2654,7 +2655,9 @@ wNumHoFTeams:: ; d5a2
 wUnusedD5A3:: ; d5a3
 	ds 1
 
-wPlayerCoins:: ; d5a4
+	ds 5
+
+wPlayerCoins:: ; d5a9
 	ds 2 ; BCD
 
 wMissableObjectFlags:: ; d5a6
@@ -2662,7 +2665,7 @@ wMissableObjectFlags:: ; d5a6
 	ds 32
 wMissableObjectFlagsEnd::
 
-	ds 7
+	ds 2
 
 wd5cd:: ds 1 ; temp copy of c1x2 (sprite facing/anim)
 
@@ -3191,7 +3194,8 @@ wBoxMon1:: box_struct wBoxMon1 ; da96
 wBoxMon2:: ds box_struct_length * (MONS_PER_BOX + -1) ; dab7
 
 wBoxMonOT::    ds NAME_LENGTH * MONS_PER_BOX ; dd2a
-wBoxMonNicks:: ds NAME_LENGTH * MONS_PER_BOX ; de06
+	ds 5
+wBoxMonNicks:: ds NAME_LENGTH * MONS_PER_BOX ; de0b
 wBoxMonNicksEnd:: ; dee2
 
 wBoxDataEnd::

@@ -44,7 +44,7 @@ _CeladonDinerText_491a7::
 _ReceivedCoinCaseText::
 	text "<PLAYER> received"
 	line "a @"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text "!@@"
 
 _CoinCaseNoRoomText::

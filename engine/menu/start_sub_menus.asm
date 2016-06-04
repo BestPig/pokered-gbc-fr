@@ -367,14 +367,14 @@ StartMenu_Item:
 	ld a, [wcf91]
 	ld [wd11e], a
 	call GetItemName
-	call CopyStringToCF4B ; copy name to wcf4b
-	ld a, [wcf91]
-	cp BICYCLE
-	jr nz, .notBicycle2
-	ld a, [wd732]
-	bit 5, a
-	jr z, .useItem_closeMenu
-	ld hl, CannotGetOffHereText
+	call CopyStringToCF50 ; copy name to wcf50
+	ld a,[wcf91]
+	cp a,BICYCLE
+	jr nz,.notBicycle2
+	ld a,[wd732]
+	bit 5,a
+	jr z,.useItem_closeMenu
+	ld hl,CannotGetOffHereText
 	call PrintText
 	jp ItemMenuLoop
 .notBicycle2

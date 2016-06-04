@@ -44,7 +44,7 @@ _BlaineBadgeText::
 _ReceivedTM38Text::
 	text "<PLAYER> received"
 	line "@"
-	TX_RAM wcf4b
+	TX_RAM wcf50
 	text "!@@"
 
 _TM38ExplanationText::
