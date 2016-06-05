@@ -1129,18 +1129,18 @@ _EnemyRanText::
 	prompt
 
 _HurtByPoisonText::
-	text $5A
+	text $5a
 	line "souffre du"
 	cont "poison!"
 	prompt
 
 _HurtByBurnText::
-	text $5A
+	text $5a
 	line "brûle!"
 	prompt
 
 _HurtByLeechSeedText::
-	text $5A
+	text $5a
 	line "perd son énergie!"
 	prompt
 
@@ -1284,42 +1284,42 @@ _GetOutText::
 	prompt
 
 _FastAsleepText::
-	text $5A
+	text $5a
 	line "fait un somme!"
 	prompt
 
 _WokeUpText::
-	text $5A
+	text $5a
 	line "se réveille!"
 	prompt
 
 _IsFrozenText::
-	text $5A
+	text $5a
 	line "est congelé!"
 	prompt
 
 _FullyParalyzedText::
-	text $5A
+	text $5a
 	line "est paralysé!"
 	prompt
 
 _FlinchedText::
-	text $5A
+	text $5a
 	line "a la trouille!"
 	prompt
 
 _MustRechargeText::
-	text $5A
+	text $5a
 	line "est à plat!"
 	prompt
 
 _DisabledNoMoreText::
-	text $5A
+	text $5a
 	line "peut attaquer!"
 	prompt
 
 _IsConfusedText::
-	text $5A
+	text $5a
 	line "devient dingue..."
 	prompt
 
@@ -1329,39 +1329,39 @@ _HurtItselfText::
 	prompt
 
 _ConfusedNoMoreText::
-	text $5A
+	text $5a
 	line "se sent mieux!"
 	prompt
 
 _SavingEnergyText::
-	text $5A
+	text $5a
 	line "se concentre!"
 	prompt
 
 _UnleashedEnergyText::
-	text $5A
+	text $5a
 	line "envoie la sauce!"
 	prompt
 
 _ThrashingAboutText::
-	text $5A
+	text $5a
 	line "cogne à fond!"
 	done
 
 _AttackContinuesText::
-	text $5A
+	text $5a
 	line "attaque encore!"
 	done
 
 _CantMoveText::
-	text $5A
+	text $5a
 	line "est immobilisé!"
 	prompt
 
 _MoveIsDisabledText::
 	TX_RAM wcd6d
 	text " de"
-	line $5A
+	line $5a
 	cont "a disparu!"
 	prompt
 
@@ -1406,12 +1406,12 @@ _ExclamationPoint5Text::
 
 _AttackMissedText::
 	text "L'attaque de"
-	line $5A
+	line $5a
 	cont "a échoué!"
 	prompt
 
 _KeptGoingAndCrashedText::
-	text $5A
+	text $5a
 	line "tombe par terre!"
 	prompt
 
@@ -1477,7 +1477,7 @@ _SubstituteBrokeText::
 
 _BuildingRageText::
 	text "La FRENESIE de"
-	line $5A
+	line $5a
 	cont "s'intensifie!"
 	prompt
 
@@ -2011,7 +2011,7 @@ _Char00Text::
 	done
 
 _Char55Text::
-	text $4B,"@@"
+	text $4b,"@@"
 
 INCLUDE "text/maps/DiglettsCaveRoute2.asm"
 INCLUDE "text/maps/ViridianForestNorthGate.asm"
@@ -2086,320 +2086,331 @@ INCLUDE "text/maps/Route24_2.asm"
 INCLUDE "text/maps/Route25.asm"
 
 _FileDataDestroyedText::
-	text "The file data is"
-	line "destroyed!"
+	text "La sauvegarde est"
+	line "détruite!"
 	prompt
 
 _WouldYouLikeToSaveText::
-	text "Would you like to"
-	line "SAVE the game?"
+	text "Voulez-vous"
+	line "sauvegarder?"
 	done
 
 _GameSavedText::
-	text "<PLAYER> saved"
-	line "the game!"
+	text $52,""
+	line "sauvegarde"
+	cont "la partie!"
 	done
 
 _OlderFileWillBeErasedText::
-	text "The older file"
-	line "will be erased to"
-	cont "save. Okay?"
+	text "L'ancienne"
+	line "sauvegarde sera"
+	cont "effacée. OK?"
 	done
 
 _WhenYouChangeBoxText::
-	text "When you change a"
-	line "#MON BOX, data"
-	cont "will be saved."
+	text "En activant"
+	line "une autre boîte"
+	cont "de #MON, les"
+	cont "données seront"
+	cont "sauvegardées."
 
-	para "Is that okay?"
+	para "Etes-vous"
+	line "d'accord?"
 	done
 
 _ChooseABoxText::
-	text "Choose a"
-	line "<pkmn> BOX.@@"
+	text "Choisissez une"
+	line "BOITE ",$4a,".@@"
 
 _EvolvedText::
 	TX_RAM wcf50
-	text " evolved"
+	text " évolue"
 	done
 
 _IntoText::
 	text ""
-	line "into @"
+	line "en @"
 	TX_RAM wcd6d
 	text "!"
 	done
 
 _StoppedEvolvingText::
-	text "Huh? @"
+	text "Hein? @"
 	TX_RAM wcf50
-	db $0
-	line "stopped evolving!"
+	text ""
+	line "n'évolue plus!"
 	prompt
 
 _IsEvolvingText::
-	text "What? @"
+	text "Hein? @"
 	TX_RAM wcf50
-	db $0
-	line "is evolving!"
+	text ""
+	line "évolue!"
 	done
 
 _FellAsleepText::
-	text "<TARGET>"
-	line "fell asleep!"
+	text $59
+	line "s'endort!"
 	prompt
 
 _AlreadyAsleepText::
-	text "<TARGET>'s"
-	line "already asleep!"
+	text $59
+	line "est déjà endormi!"
 	prompt
 
 _PoisonedText::
-	text "<TARGET>"
-	line "was poisoned!"
+	text $59
+	line "est empoisonné!"
 	prompt
 
 _BadlyPoisonedText::
-	text "<TARGET>'s"
-	line "badly poisoned!"
+	text $59
+	line "est gravement"
+	cont "empoisonné!"
 	prompt
 
 _BurnedText::
-	text "<TARGET>"
-	line "was burned!"
+	text $59
+	line "brûle!"
 	prompt
 
 _FrozenText::
-	text "<TARGET>"
-	line "was frozen solid!"
+	text $59
+	line "est gelé!"
 	prompt
 
 _FireDefrostedText::
-	text "Fire defrosted"
-	line "<TARGET>!"
+	text "Le feu dégèle"
+	line $59,"!"
 	prompt
 
 _MonsStatsRoseText::
-	text "<USER>'s"
-	line "@"
+	text $5a
+	line "gagne @"
 	TX_RAM wcf50
 	text "@@"
 
 _GreatlyRoseText::
-	text $4c, "greatly@@"
+	text $4c,"à fond@@"
 
 _RoseText::
-	text " rose!"
+	text "!"
 	prompt
 
 _MonsStatsFellText::
-	text "<TARGET>'s"
-	line "@"
+	text $59
+	line "perd @"
 	TX_RAM wcf50
 	text "@@"
 
 _GreatlyFellText::
-	text $4c, "greatly@@"
+	text $4c,"à fond@@"
 
 _FellText::
-	text " fell!"
+	text "!"
 	prompt
 
 _RanFromBattleText::
-	text "<USER>"
-	line "ran from battle!"
+	text $5a
+	line "fuit le combat!"
 	prompt
 
 _RanAwayScaredText::
-	text "<TARGET>"
-	line "ran away scared!"
+	text $59
+	line "panique et fuit!"
 	prompt
 
 _WasBlownAwayText::
-	text "<TARGET>"
-	line "was blown away!"
+	text $59
+	line "a été soufflé!"
 	prompt
 
 _ChargeMoveEffectText::
-	text "<USER>@@"
+	text $5a,"@@"
 
 _MadeWhirlwindText::
 	text ""
-	line "made a whirlwind!"
+	line "crée un cyclone!"
 	prompt
 
 _TookInSunlightText::
 	text ""
-	line "took in sunlight!"
+	line "rayonne!"
 	prompt
 
 _LoweredItsHeadText::
 	text ""
-	line "lowered its head!"
+	line "prend du recul!"
 	prompt
 
 _SkyAttackGlowingText::
 	text ""
-	line "is glowing!"
+	line "brille!"
 	prompt
 
 _FlewUpHighText::
 	text ""
-	line "flew up high!"
+	line "s'envole!"
 	prompt
 
 _DugAHoleText::
 	text ""
-	line "dug a hole!"
+	line "creuse un trou!"
 	prompt
 
 _BecameConfusedText::
-	text "<TARGET>"
-	line "became confused!"
+	text $59
+	line "devient fou!"
 	prompt
 
 _MimicLearnedMoveText::
-	text "<USER>"
-	line "learned"
+	text $5a
+	line "apprend"
 	cont "@"
 	TX_RAM wcd6d
 	text "!"
 	prompt
 
 _MoveWasDisabledText::
-	text "<TARGET>'s"
-	line "@"
 	TX_RAM wcd6d
-	text " was"
-	cont "disabled!"
+	text " de"
+	line $59
+	cont "a disparu!"
 	prompt
 
 _NothingHappenedText::
-	text "Nothing happened!"
+	text "Rien ne se passe!"
 	prompt
 
 _NoEffectText::
-	text "No effect!"
+	text "Sans effet!"
 	prompt
 
 _ButItFailedText::
-	text "But, it failed! "
+	text "Mais échoue!"
 	prompt
 
 _DidntAffectText::
-	text "It didn't affect"
-	line "<TARGET>!"
+	text "Aucun effet sur"
+	line $59,"!"
 	prompt
 
 _IsUnaffectedText::
-	text "<TARGET>"
-	line "is unaffected!"
+	text $59
+	line "ne sent rien!"
 	prompt
 
 _ParalyzedMayNotAttackText::
-	text "<TARGET>'s"
-	line "paralyzed! It may"
-	cont "not attack!"
+	text $59
+	line "est paralysé!"
+	cont "Il peut ne pas"
+	cont "attaquer!"
 	prompt
 
 _SubstituteText::
-	text "It created a"
-	line "SUBSTITUTE!"
+	text "Il crée un"
+	line "CLONE!"
 	prompt
 
 _HasSubstituteText::
-	text "<USER>"
-	line "has a SUBSTITUTE!"
+	text $5a
+	line "a un CLONE!"
 	prompt
 
 _TooWeakSubstituteText::
-	text "Too weak to make"
-	line "a SUBSTITUTE!"
+	text "Trop faible pour"
+	line "créer un CLONE!"
 	prompt
 
 _CoinsScatteredText::
-	text "Coins scattered"
-	line "everywhere!"
+	text "Une pluie de"
+	line "pognon!"
 	prompt
 
 _GettingPumpedText::
-	text "<USER>'s"
-	line "getting pumped!"
+	text $5a
+	line "accroît sa force!"
 	prompt
 
 _WasSeededText::
-	text "<TARGET>"
-	line "was seeded!"
+	text $59
+	line "est infecté!"
 	prompt
 
 _EvadedAttackText::
-	text "<TARGET>"
-	line "evaded attack!"
+	text $59
+	line "esquive!"
 	prompt
 
 _HitWithRecoilText::
-	text "<USER>'s"
-	line "hit with recoil!"
+	text $5a
+	line "se blesse en"
+	cont "frappant!"
 	prompt
 
 _ConvertedTypeText::
-	text "Converted type to"
-	line "<TARGET>'s!"
+	text "Son élément"
+	line "s'adapte!"
 	prompt
 
 _StatusChangesEliminatedText::
-	text "All STATUS changes"
-	line "are eliminated!"
+	text "Tout effet est"
+	line "annulé!"
 	prompt
 
 _StartedSleepingEffect::
-	text "<USER>"
-	line "started sleeping!"
+	text $5a
+	line "s'endort!"
 	done
 
 _FellAsleepBecameHealthyText::
-	text "<USER>"
-	line "fell asleep and"
-	cont "became healthy!"
+	text $5a
+	line "s'endort et"
+	cont "régénère!"
 	done
 
 _RegainedHealthText::
-	text "<USER>"
-	line "regained health!"
+	text $5a
+	line "régénère!"
 	prompt
 
 _TransformedText::
-	text "<USER>"
-	line "transformed into"
+	text $5a
+	line "se transforme en"
 	cont "@"
 	TX_RAM wcd6d
 	text "!"
 	prompt
 
 _LightScreenProtectedText::
-	text "<USER>'s"
-	line "protected against"
-	cont "special attacks!"
+	text $5a
+	line "est protégé con-"
+	cont "tre les attaques"
+	cont "spéciales!"
 	prompt
 
 _ReflectGainedArmorText::
-	text "<USER>"
-	line "gained armor!"
+	text $5a
+	line "augmente sa"
+	cont "protection!"
 	prompt
 
 _ShroudedInMistText::
-	text "<USER>'s"
-	line "shrouded in mist!"
+	text $5a
+	line "s'estompe dans la"
+	cont "brume!"
 	prompt
 
 _SuckedHealthText::
-	text "Sucked health from"
-	line "<TARGET>!"
+	text "La vie de"
+	line $59
+	cont "est absorbée!"
 	prompt
 
 _DreamWasEatenText::
-	text "<TARGET>'s"
-	line "dream was eaten!"
+	text "Les rêves de"
+	line $59
+	cont "sont dévorés!"
 	prompt
 
 _TradeCenterText1::
