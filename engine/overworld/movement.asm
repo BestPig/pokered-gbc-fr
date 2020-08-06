@@ -444,6 +444,7 @@ InitializeSpriteStatus:
 	ld a, $8
 	ld [hli], a   ; $c2x2: set Y displacement to 8
 	ld [hl], a    ; $c2x3: set X displacement to 8
+	call InitializeSpriteScreenPosition ; could have done fallthrough here
 	ret
 
 ; calculates the sprite's screen position form its map position and the player position

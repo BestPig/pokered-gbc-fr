@@ -368,13 +368,13 @@ PrintAlphabet:
 	ld [H_AUTOBGTRANSFERENABLED], a
 	jp Delay3
 
-LowerCaseAlphabet:
-	db "abcdefghijklmnopqrstuvwxyz ×():;[]",$e1,$e2,"-?!♂♀/⠄,¥UPPER CASE@"
+LowerCaseAlphabet: ; 6841 (1:6841)
+	db "abcdefghijklmnopqrstuvwxyz ×():;[]",$e1,$e2,"-?!♂♀/",$f2,",¥MAJUSCULES@"
 
-UpperCaseAlphabet:
-	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ ×():;[]",$e1,$e2,"-?!♂♀/⠄,¥lower case@"
+UpperCaseAlphabet: ; 6879 (1:6879)
+	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ ×():;[]",$e1,$e2,"-?!♂♀/",$f2,",¥minuscules@"
 
-PrintNicknameAndUnderscores:
+PrintNicknameAndUnderscores: ; 68b1 (1:68b1)
 	call CalcStringLength
 	ld a, c
 	ld [wNamingScreenNameLength], a
@@ -502,14 +502,14 @@ PrintNamingText:
 .placeString
 	jp PlaceString
 
-YourTextString:
-	db "YOUR @"
+YourTextString: ; 693f (1:693f)
+	db "VOTRE NOM?@"
 
-RivalsTextString:
-	db "RIVAL's @"
+RivalsTextString: ; 6945 (1:6945)
+	db "NOM DU RIVAL?@"
 
-NameTextString:
-	db "NAME?@"
+NameTextString: ; 694d (1:694d)
+	db "NOM?@"
 
-NicknameTextString:
-	db "NICKNAME?@"
+NicknameTextString: ; 6953 (1:6953)
+	db "SURNOM?@"

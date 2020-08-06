@@ -550,11 +550,9 @@ PrintStatusCondition::
 	pop de
 	jr nz, PrintStatusConditionNotFainted
 ; if the pokemon's HP is 0, print "FNT"
-	ld a, "F"
-	ld [hli], a
-	ld a, "N"
-	ld [hli], a
-	ld [hl], "T"
+	ld a,"K"
+	ld [hli],a
+	ld [hl],"O"
 	and a
 	ret
 
@@ -1308,15 +1306,16 @@ PokemonFaintedText::
 	TX_FAR _PokemonFaintedText
 	db "@"
 
-DisplayPlayerBlackedOutText::
-	ld hl, PlayerBlackedOutText
+DisplayPlayerBlackedOutText:: ; 2aa5 (0:2aa5)
+	ld hl,PlayerBlackedOutText
 	call PrintText
-	ld a, [wd732]
-	res 5, a ; reset forced to use bike bit
-	ld [wd732], a
+	ld a,[wd732]
+	res 5,a ; reset forced to use bike bit
+	ld [wd732],a
 	jp HoldTextDisplayOpen
 
-PlayerBlackedOutText::
+
+PlayerBlackedOutText:: ; 2aba (0:2aba)
 	TX_FAR _PlayerBlackedOutText
 	db "@"
 
@@ -1621,9 +1620,11 @@ DisplayChooseQuantityMenu::
 .drawTextBox
 	call TextBoxBorder
 	coord hl, 16, 10
-	ld a, [wListMenuID]
-	cp PRICEDITEMLISTMENU
-	jr nz, .printInitialQuantity
+	ld a,[wListMenuID]
+	cp a,PRICEDITEMLISTMENU
+	jr nz,.printInitialQuantity
+	ld a,"¥"
+	ld [$C47A],a
 	coord hl, 8, 10
 .printInitialQuantity
 	ld de, InitialQuantityText
@@ -1834,6 +1835,7 @@ PrintListMenuEntries::
 	add hl, bc
 	ld c, $a3 ; no leading zeroes, right-aligned, print currency symbol, 3 bytes
 	call PrintBCDNumber
+	ld [hl], $F0
 .skipPrintingItemPrice
 	ld a, [wListMenuID]
 	and a
@@ -1936,8 +1938,8 @@ PrintListMenuEntries::
 	ld de, ListMenuCancelText
 	jp PlaceString
 
-ListMenuCancelText::
-	db "CANCEL@"
+ListMenuCancelText:: ; 2f97 (0:2f97)
+	db "RETOUR@"
 
 GetMonName::
 	push hl
@@ -2042,10 +2044,10 @@ GetMachineName::
 	pop hl
 	ret
 
-TechnicalPrefix::
-	db "TM"
-HiddenPrefix::
-	db "HM"
+TechnicalPrefix:: ; 303c (0:303c)
+	db "CT"
+HiddenPrefix:: ; 303e (0:303e)
+	db "CS"
 
 ; sets carry if item is HM, clears carry if item is not HM
 ; Input: a = item ID

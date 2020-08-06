@@ -213,24 +213,24 @@ FinishDTE::
 	inc de
 	jp PlaceNextChar
 
-Char5CText::
-	db "TM@"
-Char5DText::
-	db "TRAINER@"
-Char5BText::
+Char5CText:: ; 1a55 (0:1a55)
 	db "PC@"
-Char5EText::
+Char5DText:: ; 1a58 (0:1a58)
 	db "ROCKET@"
-Char54Text::
-	db "POKé@"
-Char56Text::
+Char5BText:: ; 1a60 (0:1a60)
 	db "……@"
-Char5AText::
-	db "Enemy @"
-Char4AText::
+Char5EText:: ; 1a63 (0:1a63)
 	db $E1,$E2,"@" ; PKMN
+Char54Text:: ; 1a6a (0:1a6a)
+	db "CT@"
+Char56Text:: ; 1a6f (0:1a6f)
+	db "DRES.@"
+Char5AText:: ; 1a72 (0:1a72)
+	db "POKé@"
+Char4AText:: ; 1a70 (0:1a70)
+	db " ennemi@"
 
-Char55::
+Char55:: ; 1a78 (0:1a78)
 	push de
 	ld b, h
 	ld c, l
@@ -247,18 +247,19 @@ Char55Text::
 	TX_FAR _Char55Text
 	db "@"
 
-Char5F::
+Char5F:: ; 1a8d (0:1a8d)
 ; ends a Pokédex entry
 	ld [hl], "."
 	pop hl
 	ret
 
-Char58:: ; prompt
-	ld a, [wLinkState]
+Char58:: ; 1a91 (0:1a91)
+	ld a,[wLinkState]
 	cp LINK_STATE_BATTLING
 	jp z, .ok
 	ld a, "▼"
 	Coorda 18, 16
+
 .ok
 	call ProtectedDelay3
 	call ManualTextScroll

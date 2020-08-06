@@ -293,11 +293,11 @@ PrintStat:
 	add hl, de
 	ret
 
-StatsText:
-	db   "ATTACK"
-	next "DEFENSE"
-	next "SPEED"
-	next "SPECIAL@"
+StatsText: ; 12b3a (4:6b3a)
+	db   "FOR"
+	next "DEF"
+	next "VIT"
+	next "SPE@"
 
 StatusScreen2:
 	ld a, [hTilesetType]
@@ -473,9 +473,9 @@ CalcExpToLevelUp:
 	ld [hl], a
 	ret
 
-StatusScreenExpText:
-	db   "EXP POINTS"
-	next "LEVEL UP@"
+StatusScreenExpText: ; 12caf (4:6caf)
+	db   "PTS EXP."
+	next "PROCH.NIV.@"
 
 StatusScreen_ClearName:
 	ld bc, 10

@@ -74,14 +74,14 @@ EndOfBattle:
 	ld [wDestinationWarpID], a
 	ret
 
-YouWinText:
-	db "YOU WIN@"
+YouWinText: ; 13853 (4:7853)
+	db "  GAGNE@"
 
-YouLoseText:
-	db "YOU LOSE@"
+YouLoseText: ; 1385b (4:785b)
+	db "  PERDU@"
 
-DrawText:
-	db "  DRAW@"
+DrawText: ; 13864 (4:7864)
+	db "MATCH NUL@"
 
 PickUpPayDayMoneyText:
 	TX_FAR _PickUpPayDayMoneyText

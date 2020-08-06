@@ -444,12 +444,12 @@ BillsHousePokemonListText1:
 	TX_FAR _BillsHousePokemonListText1
 	db "@"
 
-BillsMonListText:
-	db   "EEVEE"
-	next "FLAREON"
-	next "JOLTEON"
-	next "VAPOREON"
-	next "CANCEL@"
+BillsMonListText: ; 1ec84 (7:6c84)
+	db   "EVOLI"
+	next "PYROLI"
+	next "VOLTALI"
+	next "AQUALI"
+	next "RETOUR@"
 
 BillsHousePokemonListText2:
 	TX_FAR _BillsHousePokemonListText2

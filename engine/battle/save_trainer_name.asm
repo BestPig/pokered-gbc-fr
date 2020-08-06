@@ -68,45 +68,45 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw wTrainerName
 
-YoungsterName:
-	db "YOUNGSTER@"
-BugCatcherName:
-	db "BUG CATCHER@"
-LassName:
-	db "LASS@"
-JrTrainerMName:
-	db "JR.TRAINER♂@"
-JrTrainerFName:
-	db "JR.TRAINER♀@"
-PokemaniacName:
-	db "POKéMANIAC@"
-SuperNerdName:
-	db "SUPER NERD@"
-BurglarName:
-	db "BURGLAR@"
-EngineerName:
-	db "ENGINEER@"
-JugglerXName:
-	db "JUGGLER@"
-SwimmerName:
-	db "SWIMMER@"
-BeautyName:
-	db "BEAUTY@"
-RockerName:
+YoungsterName: ; 27ec2 (9:7ec2)
+	db "GAMIN@"
+BugCatcherName: ; 27ecc (9:7ecc)
+	db "SCOUT@"
+LassName: ; 27ed8 (9:7ed8)
+	db "FILLETTE@"
+JrTrainerMName: ; 27edd (9:7edd)
+	db "DRESSEUR JR♂@"
+JrTrainerFName: ; 27ee9 (9:7ee9)
+	db "DRESSEUR JR♀@"
+PokemaniacName: ; 27ef5 (9:7ef5)
+	db "#MANIAC@"
+SuperNerdName: ; 27f00 (9:7f00)
+	db "INTELLO@"
+BurglarName: ; 27f0b (9:7f0b)
+	db "PILLARD@"
+EngineerName: ; 27f13 (9:7f13)
+	db "MECANO@"
+JugglerXName: ; 27f1c (9:7f1c)
+	db "JONGLEUR@"
+SwimmerName: ; 27f24 (9:7f24)
+	db "NAGEUR@"
+BeautyName: ; 27f2c (9:7f2c)
+	db "CANON@"
+RockerName: ; 27f33 (9:7f33)
 	db "ROCKER@"
-JugglerName:
-	db "JUGGLER@"
-BlackbeltName:
-	db "BLACKBELT@"
-ProfOakName:
-	db "PROF.OAK@"
-ChiefName:
+JugglerName: ; 27f3a (9:7f3a)
+	db "JONGLEUR@"
+BlackbeltName: ; 27f42 (9:7f42)
+	db "KARATEKA@"
+ProfOakName: ; 27f4c (9:7f4c)
+	db "PROF.CHEN@"
+ChiefName: ; 27f55 (9:7f55)
 	db "CHIEF@"
-ScientistName:
-	db "SCIENTIST@"
-RocketName:
+ScientistName: ; 27f5b (9:7f5b)
+	db "SCIENTIFIQUE@"
+RocketName: ; 27f65 (9:7f65)
 	db "ROCKET@"
-CooltrainerMName:
-	db "COOLTRAINER♂@"
-CooltrainerFName:
-	db "COOLTRAINER♀@"
+CooltrainerMName: ; 27f6c (9:7f6c)
+	db "TOPDRESSEUR♂@"
+CooltrainerFName: ; 27f79 (9:7f79)
+	db "TOPDRESSEUR♀@"

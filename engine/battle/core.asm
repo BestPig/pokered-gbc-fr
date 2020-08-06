@@ -2149,7 +2149,7 @@ DisplayBattleMenu:
 	ld a, $2 ; select the "ITEM" menu
 	jp .upperLeftMenuItemWasNotSelected
 .oldManName
-	db "OLD MAN@"
+	db "VIEILLARD@"
 .handleBattleMenuInput
 	ld a, [wBattleAndStartSavedMenuItem]
 	ld [wCurrentMenuItem], a
@@ -2780,8 +2780,9 @@ MoveDisabledText:
 	TX_FAR _MoveDisabledText
 	db "@"
 
-WhichTechniqueString:
-	db "WHICH TECHNIQUE?@"
+WhichTechniqueString: ; 3d3b8 (f:53b8)
+	db "Quelle technique?"
+	next "                 @"
 
 SelectMenuItem_CursorUp:
 	ld a, [wCurrentMenuItem]
@@ -3000,8 +3001,8 @@ PrintMenuItem:
 	ld [H_AUTOBGTRANSFERENABLED], a
 	jp Delay3
 
-DisabledText:
-	db "disabled!@"
+DisabledText: ; 3d555 (f:5555)
+	db "NON DISP.@"
 
 TypeText:
 	db "TYPE@"
@@ -6938,15 +6939,19 @@ InitWildBattle:
 	ld [hli], a   ; write front sprite pointer
 	ld [hl], b
 	ld hl, wEnemyMonNick  ; set name to "GHOST"
-	ld a, "G"
-	ld [hli], a
-	ld a, "H"
-	ld [hli], a
-	ld a, "O"
-	ld [hli], a
 	ld a, "S"
 	ld [hli], a
+	ld a, "P"
+	ld [hli], a
+	ld a, "E"
+	ld [hli], a
+	ld a, "C"
+	ld [hli], a
 	ld a, "T"
+	ld [hli], a
+	ld a, "R"
+	ld [hli], a
+	ld a, "E"
 	ld [hli], a
 	ld [hl], "@"
 	ld a, [wcf91]
@@ -8002,13 +8007,13 @@ PrintStatText:
 	ld bc, $a
 	jp CopyData
 
-StatsTextStrings:
-	db "ATTACK@"
-	db "DEFENSE@"
-	db "SPEED@"
-	db "SPECIAL@"
-	db "ACCURACY@"
-	db "EVADE@"
+StatsTextStrings: ; 3f69f (f:769f)
+	db "FOR@"
+	db "DEF@"
+	db "VIT@"
+	db "SPE@"
+	db "PRE@"
+	db "ESQ@"
 
 StatModifierRatios:
 ; first byte is numerator, second byte is denominator
