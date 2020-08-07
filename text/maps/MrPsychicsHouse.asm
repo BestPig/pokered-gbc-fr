@@ -8,7 +8,7 @@ _TM29PreReceiveText::
 _ReceivedTM29Text::
 	text "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _TM29ExplanationText::

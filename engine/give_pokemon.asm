@@ -18,7 +18,7 @@ _GivePokemon:
 	callab LoadEnemyMonData
 	call SetPokedexOwnedFlag
 	callab SendNewMonToBox
-	ld hl, wcf50
+	ld hl, wcf4b
 	ld a, [wCurrentBoxNum]
 	and $7f
 	cp 9

@@ -16,14 +16,14 @@ _CeladonMartRoofText_484f3::
 _CeladonMartRoofText_484f9::
 	text "<PLAYER> reçoit"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _CeladonMartRoofText_484fe::
 	text ""
 
 	para "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ":"
 	line "LASER GLACE!"
 
@@ -43,14 +43,14 @@ _CeladonMartRoofText_48504::
 _CeladonMartRoofText_4850a::
 	text "<PLAYER> reçoit"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _CeladonMartRoofText_4850f::
 	text ""
 
 	para "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ":"
 	line "EBOULEMENT!"
 
@@ -123,7 +123,7 @@ _VendingMachineText4::
 _VendingMachineText5::
 	text "Et hop!"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	done
 

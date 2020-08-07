@@ -21,7 +21,7 @@ _SilphCoPresidentText::
 _ReceivedSilphCoMasterBallText::
 	text "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _SilphCo10Text_6231c::

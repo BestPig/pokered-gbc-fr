@@ -16,7 +16,7 @@ _Route1ViridianMartSampleText::
 _Route1Text_1cae8::
 	text "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _Route1Text_1caee::

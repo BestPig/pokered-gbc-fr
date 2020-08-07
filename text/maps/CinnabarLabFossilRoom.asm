@@ -37,7 +37,7 @@ _Lab4Text_75dd5::
 
 	para "Il ressemble à un"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	prompt
 
@@ -49,7 +49,7 @@ _Lab4Text_610ae::
 
 	para "C'est un fossile"
 	line "de @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ","
 	cont "un #MON qui a"
 	cont "disparu!"

@@ -46,7 +46,7 @@ _WardenThankYouText::
 _ReceivedHM04Text::
 	text "<PLAYER> reçoit"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _HM04ExplanationText::

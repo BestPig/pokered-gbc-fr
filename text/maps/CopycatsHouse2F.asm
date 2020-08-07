@@ -31,7 +31,7 @@ _TM31PreReceiveText::
 _ReceivedTM31Text::
 	text "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _TM31ExplanationText1::

@@ -10,7 +10,7 @@ _TM35PreReceiveText::
 _ReceivedTM35Text::
 	text "<PLAYER> reçoit:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _TM35ExplanationText::

@@ -2343,7 +2343,7 @@ UseBagItem:
 	ld a, [wcf91]
 	ld [wd11e], a
 	call GetItemName
-	call CopyStringToCF50 ; copy name
+	call CopyStringToCF4B ; copy name
 	xor a
 	ld [wPseudoItemID], a
 	call UseItem
@@ -3649,7 +3649,7 @@ CheckPlayerStatusConditions:
 	ld a, RAGE
 	ld [wd11e], a
 	call GetMoveName
-	call CopyStringToCF50
+	call CopyStringToCF4B
 	xor a
 	ld [wPlayerMoveEffect], a
 	ld hl, PlayerCanExecuteMove
@@ -5233,7 +5233,7 @@ ReloadMoveData:
 	call IncrementMovePP
 ; the follow two function calls are used to reload the move name
 	call GetMoveName
-	call CopyStringToCF50
+	call CopyStringToCF4B
 	ld a,$01
 	and a
 	ret
@@ -5734,7 +5734,7 @@ EnemyCanExecuteChargingMove:
 	ld [wNameListType], a
 	call GetName
 	ld de, wcd6d
-	call CopyStringToCF50
+	call CopyStringToCF4B
 EnemyCanExecuteMove: ; 3e72b (f:672b)
 	xor a
 	ld [wMonIsDisobedient], a
@@ -6171,7 +6171,7 @@ CheckEnemyStatusConditions:
 	ld a, RAGE
 	ld [wd11e], a
 	call GetMoveName
-	call CopyStringToCF50
+	call CopyStringToCF4B
 	xor a
 	ld [wEnemyMoveEffect], a
 	ld hl, EnemyCanExecuteMove
@@ -6213,7 +6213,7 @@ GetCurrentMove:
 	ld [wNameListType], a
 	call GetName
 	ld de, wcd6d
-	jp CopyStringToCF50
+	jp CopyStringToCF4B
 
 LoadEnemyMonData:
 	ld a, [wLinkState]
@@ -8004,7 +8004,7 @@ PrintStatText:
 	jr z, .findStatName_outer
 	jr .findStatName_inner
 .foundStatName
-	ld de, wcf50
+	ld de, wcf4b
 	ld bc, $a
 	jp CopyData
 

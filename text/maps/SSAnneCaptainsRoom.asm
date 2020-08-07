@@ -37,7 +37,7 @@ _ReceivingHM01Text::
 _ReceivedHM01Text::
 	text "<PLAYER> obtient"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _SSAnne7Text_61932::

@@ -53,7 +53,7 @@ _LavenderHouse1Text_1d94c::
 _ReceivedFluteText::
 	text "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _FluteExplanationText::

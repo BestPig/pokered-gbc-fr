@@ -11,7 +11,7 @@ _SilphCo2Text_59ded::
 _ReceivedTM36Text::
 	text "<PLAYER> obtient"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _TM36ExplanationText::

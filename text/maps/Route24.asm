@@ -13,7 +13,7 @@ _Route24Text_51515::
 _Route24Text_5151a::
 	text "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _Route24Text_51521::

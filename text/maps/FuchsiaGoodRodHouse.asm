@@ -21,7 +21,7 @@ _FuchsiaHouse3Text_561c2::
 
 	para "<PLAYER> reçoit"
 	line "une @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _FuchsiaHouse3Text_56212::

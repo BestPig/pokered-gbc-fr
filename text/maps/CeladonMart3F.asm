@@ -11,7 +11,7 @@ _TM18PreReceiveText::
 _ReceivedTM18Text::
 	text "<PLAYER> reçoit"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _TM18ExplanationText::

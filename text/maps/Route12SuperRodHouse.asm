@@ -20,7 +20,7 @@ _Route12HouseText_564c5::
 
 	para "<PLAYER> obtient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _Route12HouseText_564ca::

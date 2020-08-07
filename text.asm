@@ -86,7 +86,7 @@ _PokeCenterSignText::
 _FoundItemText::
 	text $52, " obtient..."
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _NoMoreRoomForItemText::
@@ -260,7 +260,7 @@ _AIBattleUseItemText::
 	prompt
 
 _TradeWentToText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " va"
 	line "à @"
 	TX_RAM wGrassRate
@@ -269,7 +269,7 @@ _TradeWentToText::
 
 _TradeForText::
 	text "Contre @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	line "de ",$52,","
 	done
@@ -311,7 +311,7 @@ _TradeWillTradeText::
 
 _TradeforText::
 	text "Contre @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	line "de ",$52,"."
 	done
@@ -348,7 +348,7 @@ _OneMoreGoSlotMachineText::
 _LinedUpText::
 	text " en ligne!"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " jetons!"
 	done
 
@@ -1381,7 +1381,7 @@ _InsteadText::
 	cont "@@"
 
 _CF50Text::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "@"
 
 _ExclamationPoint1Text::
@@ -1843,7 +1843,7 @@ _DepositWhichMonText::
 	done
 
 _MonWasStoredText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " est"
 	line "stocké dans la"
 	cont "boîte @"
@@ -1865,7 +1865,7 @@ _BoxFullText::
 _MonIsTakenOutText::
 	text "Retrait de"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	cont "terminé."
 	prompt
@@ -1890,20 +1890,20 @@ _ReleaseWhichMonText::
 	done
 
 _OnceReleasedText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " sera"
 	line "à jamais perdu."
 	cont "Continuer?"
 	done
 
 _MonWasReleasedText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " est"
 	line "relâché. Adieu,"
 	cont "@"
 
 _CF50ExclamationText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	prompt
 
@@ -2123,7 +2123,7 @@ _ChooseABoxText::
 	line "BOITE ",$4a,".@@"
 
 _EvolvedText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " évolue"
 	done
 
@@ -2136,14 +2136,14 @@ _IntoText::
 
 _StoppedEvolvingText::
 	text "Hein? @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	line "n'évolue plus!"
 	prompt
 
 _IsEvolvingText::
 	text "Hein? @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	line "évolue!"
 	done
@@ -2187,7 +2187,7 @@ _FireDefrostedText::
 _MonsStatsRoseText::
 	text $5a
 	line "gagne @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "@@"
 
 _GreatlyRoseText::
@@ -2200,7 +2200,7 @@ _RoseText::
 _MonsStatsFellText::
 	text $59
 	line "perd @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "@@"
 
 _GreatlyFellText::
@@ -2551,7 +2551,7 @@ _PokemartBuyingGreetingText::
 	done
 
 _PokemartTellBuyPriceText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "?"
 	line "Cela fera"
 	cont "@"
@@ -2608,7 +2608,7 @@ _LearnedMove1Text::
 	text ""
 	line "apprend..."
 	cont "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _WhichMoveToForgetText::
@@ -2619,7 +2619,7 @@ _WhichMoveToForgetText::
 _AbandonLearningText::
 	text "Ne pas apprendre"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "?"
 	done
 
@@ -2628,7 +2628,7 @@ _DidNotLearnText::
 	text ""
 	line "n'a pas appris"
 	cont "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	prompt
 
@@ -2637,7 +2637,7 @@ _TryingToLearnText::
 	text " essaie"
 	line "d'apprendre"
 	cont "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 
 	para "Mais @"
@@ -2650,7 +2650,7 @@ _TryingToLearnText::
 	line "attaque pour"
 	cont "apprendre"
 	cont "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "?"
 	done
 
@@ -2833,7 +2833,7 @@ _SetToBoxText::
 	text " est"
 	cont "transféré à la"
 	cont "BOITE @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " du PC!"
 	done
 
@@ -2928,7 +2928,7 @@ _SurfingNoPlaceToGetOffText::
 	prompt
 
 _VitaminStatRoseText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " de"
 	line "@"
 	TX_RAM wcd6d
@@ -3000,14 +3000,14 @@ _RestorePPWhichTechniqueText::
 
 _PPMaxedOutText::
 	text "PP de @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	line "sont au max."
 	prompt
 
 _PPIncreasedText::
 	text "PP de @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ""
 	line "augmentés."
 	prompt
@@ -3027,20 +3027,20 @@ _BootedUpHMText::
 _TeachMachineMoveText::
 	text "Elle contient:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 
 	text "!"
 
 	para "Apprendre"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 
 	text " à"
 	cont "un #MON?"
 	done
 
 _MonCannotLearnMachineMoveText::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text " est"
 	line "incompatible avec"
 	cont "@"
@@ -3050,7 +3050,7 @@ _MonCannotLearnMachineMoveText::
 
 	para "Instruction de"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 
 	text ""
 	cont "impossible."
@@ -3105,7 +3105,7 @@ _ItemUseText001::
 	text $52," utilise:@@"
 
 _ItemUseText002::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	done
 
@@ -3113,7 +3113,7 @@ _GotOnBicycleText1::
 	text $52, " monte sur@@"
 
 _GotOnBicycleText2::
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	prompt
 
@@ -3122,7 +3122,7 @@ _GotOffBicycleText1::
 
 _GotOffBicycleText2::
 	text "la @"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "."
 	prompt
 
@@ -3136,7 +3136,7 @@ _ThrewAwayItemText::
 _IsItOKToTossItemText::
 	text "Jeter:"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text ", OK?"
 	prompt
 
@@ -3151,7 +3151,7 @@ _AlreadyKnowsText::
 	text ""
 	line "connaît déjà"
 	cont "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!"
 	prompt
 

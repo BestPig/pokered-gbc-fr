@@ -11,7 +11,7 @@ _MtMoon3Text_49f64::
 _MtMoon3Text_49f6f::
 	text "<PLAYER> obtient"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _MtMoon3Text_49f7f::

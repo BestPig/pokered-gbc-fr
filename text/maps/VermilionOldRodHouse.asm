@@ -18,7 +18,7 @@ _VermilionHouse2Text_560b6::
 
 	para "<PLAYER> reçoit"
 	line "@"
-	TX_RAM wcf50
+	TX_RAM wcf4b
 	text "!@@"
 
 _VermilionHouse2Text_560bb::
