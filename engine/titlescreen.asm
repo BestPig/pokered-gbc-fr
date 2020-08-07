@@ -111,7 +111,7 @@ DisplayTitleScreen:
 	jr .next
 
 .tileScreenCopyrightTiles ; 437f (1:437f)
-	db $41,$42,$43,$44,$42,$43,$4f,$46,$47,$48,$49,$4A,$4B,$4C,$4D,$4E ; ©1995-1999 GAME FREAK inc.
+	db $41,$42,$43,$44,$42,$43,$45,$46,$47,$48,$49,$4A,$4B,$4C,$4D,$4E ; ©1995-1999 GAME FREAK inc.
 
 .next
 	call SaveScreenTilesToBuffer2
@@ -378,9 +378,9 @@ LoadCopyrightTiles:
 	jp PlaceString
 
 CopyrightTextString: ; 4556 (1:4556)
-	db   $60,$61,$62,$63,$61,$62,$7C,$7F,$65,$66,$67,$68,$69,$6A             ; ©1995-1999 Nintendo
-	next $60,$61,$62,$63,$61,$62,$7C,$7F,$6B,$6C,$6D,$6E,$6F,$70,$71,$72     ; ©1995-1999 Creatures inc.
-	next $60,$61,$62,$63,$61,$62,$7C,$7F,$73,$74,$75,$76,$77,$78,$79,$7A,$7B ; ©1995-1999 GAME FREAK inc.
+	db   $60,$61,$62,$63,$61,$62,$64,$7F,$65,$66,$67,$68,$69,$6A             ; ©1995-1999 Nintendo
+	next $60,$61,$62,$63,$61,$62,$64,$7F,$6B,$6C,$6D,$6E,$6F,$70,$71,$72     ; ©1995-1999 Creatures inc.
+	next $60,$61,$62,$63,$61,$62,$64,$7F,$73,$74,$75,$76,$77,$78,$79,$7A,$7B ; ©1995-1999 GAME FREAK inc.
 	db   "@"
 
 INCLUDE "data/title_mons.asm"
