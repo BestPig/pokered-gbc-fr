@@ -1,62 +1,63 @@
 _DayCareIntroText::
-	text "I run a DAYCARE."
-	line "Would you like me"
-	cont "to raise one of"
-	cont "your #MON?"
+	text "Je m'occupe de la"
+	line "PENSION. Veux-tu"
+	cont "que j'élève un de"
+	cont "tes #MON?"
 	done
 
 _DayCareWhichMonText::
-	text "Which #MON"
-	line "should I raise?"
+	text "Quel #MON"
+	line "veux-tu me"
+	cont "confier?"
 	prompt
 
 _DayCareWillLookAfterMonText::
-	text "Fine, I'll look"
-	line "after @"
+	text "Très bien, je"
+	line "vais m'occuper de"
+	cont "@"
 	TX_RAM wcd6d
-	text ""
-	cont "for a while."
+	text "."
 	prompt
 
 _DayCareComeSeeMeInAWhileText::
-	text "Come see me in"
-	line "a while."
+	text "Reviens un peu"
+	line "plus tard."
 	done
 
 _DayCareMonHasGrownText::
-	text "Your @"
+	text "Ton @"
 	TX_RAM wcd6d
 	text ""
-	line "has grown a lot!"
+	line "a bien évolué!"
 
-	para "By level, it's"
-	line "grown by @"
+	para "Ses niveaux ont"
+	line "augmenté de @"
 	TX_NUM wDayCareNumLevelsGrown,$1,$3
 	text "!"
 
-	para "Aren't I great?"
+	para "Merci qui? Hein?"
 	prompt
 
 _DayCareOweMoneyText::
-	text "You owe me ¥@"
+	text "Donne-moi ¥@"
 	TX_BCD wDayCareTotalCost, $c2
 	text ""
-	line "for the return"
-	cont "of this #MON."
+	line "et je te rends"
+	cont "ton #MON."
 	done
 
 _DayCareGotMonBackText::
-	text "<PLAYER> got"
+	text "<PLAYER> récupère"
 	line "@"
 	TX_RAM wDayCareMonName
-	text " back!"
+	text "!"
 	done
 
 _DayCareMonNeedsMoreTimeText::
-	text "Back already?"
-	line "Your @"
+	text "Déjà de retour?"
+	line "Ton @"
 	TX_RAM wcd6d
 	text ""
-	cont "needs some more"
-	cont "time with me."
+	cont "doit rester"
+	cont "encore un peu."
 	prompt

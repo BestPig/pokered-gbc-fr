@@ -40,7 +40,7 @@ AskName:
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	ld a, [wcf50]
-	cp $50
+	cp "@"
 	ret nz
 .declinedNickname
 	ld d, h
@@ -111,7 +111,7 @@ DisplayNamingScreen:
 	ld [wMenuWatchedKeys], a
 	ld a, 7
 	ld [wMaxMenuItem], a
-	ld a, $50
+	ld a, "@"
 	ld [wcf50], a
 	xor a
 	ld hl, wNamingScreenSubmitName

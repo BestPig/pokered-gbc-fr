@@ -91,7 +91,7 @@ DiplomaTextPointersAndCoords:
 	dw DiplomaCongrats
 	dwCoord 2, 6
 	dw DiplomaGameFreak
-	dwCoord 9, 16
+	dwCoord 9, 15
 
 DiplomaText:
 	db $70,"Diplôme",$70,"@"

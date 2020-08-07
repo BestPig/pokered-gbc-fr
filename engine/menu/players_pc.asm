@@ -17,6 +17,8 @@ PlayerPC: ; 78e6 (1:78e6)
 	set 6, [hl]
 
 PlayerPCMenu:
+	ld hl, wd730
+	set 6, [hl]
 	ld a, [wParentMenuItem]
 	ld [wCurrentMenuItem], a
 	ld hl, wFlags_0xcd60

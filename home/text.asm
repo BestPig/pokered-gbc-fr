@@ -213,21 +213,21 @@ FinishDTE::
 	inc de
 	jp PlaceNextChar
 
-Char5CText:: ; 1a55 (0:1a55)
+Char5BText::
 	db "PC@"
-Char5DText:: ; 1a58 (0:1a58)
+Char5EText::
 	db "ROCKET@"
-Char5BText:: ; 1a60 (0:1a60)
+Char56Text::
 	db "……@"
-Char5EText:: ; 1a63 (0:1a63)
-	db $E1,$E2,"@" ; PKMN
-Char54Text:: ; 1a6a (0:1a6a)
+Char4AText::
+	db $E1, $E2, "@"
+Char5CText::
 	db "CT@"
-Char56Text:: ; 1a6f (0:1a6f)
+Char5DText::
 	db "DRES.@"
-Char5AText:: ; 1a72 (0:1a72)
+Char54Text::
 	db "POKé@"
-Char4AText:: ; 1a70 (0:1a70)
+Char5AText::
 	db " ennemi@"
 
 Char55:: ; 1a78 (0:1a78)

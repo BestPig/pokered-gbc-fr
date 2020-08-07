@@ -155,6 +155,7 @@ charmap "#", $54
 ;charmap "POKé", $54
 charmap "<TARGET>", $59
 charmap "<USER>", $5A
+charmap "‘", $70
 charmap "′", $71
 charmap "″", $73
 charmap "№", $74
@@ -258,6 +259,7 @@ charmap "t'", $DD
 charmap "u'", $DE
 charmap "y'", $DF
 charmap "'", $E0
+
 charmap "-", $E3
 charmap "+", $E4
 charmap "'m", $E5
@@ -265,6 +267,7 @@ charmap "?", $E6
 charmap "!", $E7
 charmap ".", $E8
 
+charmap "▷", $EC
 charmap "▶", $ED
 charmap "▲", $ED
 charmap "▼", $EE

@@ -550,9 +550,9 @@ PrintStatusCondition::
 	pop de
 	jr nz, PrintStatusConditionNotFainted
 ; if the pokemon's HP is 0, print "FNT"
-	ld a,"K"
-	ld [hli],a
-	ld [hl],"O"
+	ld a, "K"
+	ld [hli], a
+	ld [hl], "O"
 	and a
 	ret
 
@@ -1569,12 +1569,12 @@ DisplayListMenuIDLoop::
 	ld a, [wWhichPokemon]
 	call GetPartyMonName
 .storeChosenEntry ; store the menu entry that the player chose and return
-	ld de,wcd6d
+	ld de, wcd6d
 	call CopyStringToCF50 ; copy name to wcf50
-	ld a,CHOSE_MENU_ITEM
-	ld [wMenuExitMethod],a
-	ld a,[wCurrentMenuItem]
-	ld [wChosenMenuItem],a
+	ld a, CHOSE_MENU_ITEM
+	ld [wMenuExitMethod], a
+	ld a, [wCurrentMenuItem]
+	ld [wChosenMenuItem], a
 	xor a
 	ld [hJoy7], a ; joypad state update flag
 	ld hl, wd730
@@ -1620,11 +1620,11 @@ DisplayChooseQuantityMenu::
 .drawTextBox
 	call TextBoxBorder
 	coord hl, 16, 10
-	ld a,[wListMenuID]
-	cp a,PRICEDITEMLISTMENU
-	jr nz,.printInitialQuantity
-	ld a,"¥"
-	ld [$C47A],a
+	ld a, [wListMenuID]
+	cp PRICEDITEMLISTMENU
+	jr nz, .printInitialQuantity
+	ld a, "¥"
+	ld [wTileMap+$DA], a
 	coord hl, 8, 10
 .printInitialQuantity
 	ld de, InitialQuantityText
@@ -1708,7 +1708,7 @@ DisplayChooseQuantityMenu::
 	ld de, SpacesBetweenQuantityAndPriceText
 	call PlaceString
 	ld de, hMoney ; total price
-	ld c, $a3
+	ld c, $83
 	call PrintBCDNumber
 	coord hl, 9, 10
 .printQuantity
@@ -1833,9 +1833,9 @@ PrintListMenuEntries::
 	pop hl
 	ld bc, SCREEN_WIDTH + 5 ; 1 row down and 5 columns right
 	add hl, bc
-	ld c, $a3 ; no leading zeroes, right-aligned, print currency symbol, 3 bytes
+	ld c, $83 ; no leading zeroes, right-aligned, print currency symbol, 3 bytes
 	call PrintBCDNumber
-	ld [hl], $F0
+	ld [hl], "¥"
 .skipPrintingItemPrice
 	ld a, [wListMenuID]
 	and a

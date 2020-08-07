@@ -42,7 +42,7 @@ DisplayTitleScreen:
 	call FarCopyData2
 	ld hl, GamefreakLogoGraphics
 	ld de, vTitleLogo2 + $100 + $50
-	ld bc, $90
+	ld bc, $a0
 	ld a, BANK(GamefreakLogoGraphics)
 	call FarCopyData2
 	ld hl, PokemonLogoGraphics
@@ -371,7 +371,7 @@ LoadCopyrightAndTextBoxTiles:
 LoadCopyrightTiles:
 	ld de, NintendoCopyrightLogoGraphics
 	ld hl, vChars2 + $600
-	lb bc, BANK(NintendoCopyrightLogoGraphics), (GamefreakLogoGraphicsEnd - NintendoCopyrightLogoGraphics) / $10
+	lb bc, BANK(NintendoCopyrightLogoGraphics), (GamefreakLogoGraphicsEnd - NintendoCopyrightLogoGraphics) / $0f
 	call CopyVideoData
 	coord hl, 2, 7
 	ld de, CopyrightTextString
@@ -387,18 +387,13 @@ INCLUDE "data/title_mons.asm"
 
 ; prints version text (red, blue)
 PrintGameVersionOnTitleScreen:
-	coord hl, 7, 8
+	coord hl, 6, 8
 	ld de, VersionOnTitleScreenText
 	jp PlaceString
 
 ; these point to special tiles specifically loaded for that purpose and are not usual text
 VersionOnTitleScreenText:
-IF DEF(_RED)
-	db $60,$61,$62,$63,$64,$65,$66,$67,$68,$69,"@" ; "Version Rouge"
-ENDC
-IF DEF(_BLUE)
-	db $61,$62,$63,$64,$65,$66,$67,$68,"@" ; "Blue Version"
-ENDC
+db $60,$61,$62,$63,$64,$65,$66,$67,$68,$69,"@" ; "Version Rouge" or "Version Bleue"
 
 NintenText: db "NINTEN@"
 SonyText:   db "SONY@"

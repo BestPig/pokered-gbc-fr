@@ -12,17 +12,17 @@ DisplayPCMainMenu::
 	jr nz, .leaguePCAvailable
 	coord hl, 0, 0
 	ld b, 8
-	ld c, 14
+	ld c, 15
 	jr .next
 .noOaksPC
 	coord hl, 0, 0
 	ld b, 6
-	ld c, 14
+	ld c, 15
 	jr .next
 .leaguePCAvailable
 	coord hl, 0, 0
 	ld b, 10
-	ld c, 14
+	ld c, 15
 .next
 	call TextBoxBorder
 	call UpdateSprites
@@ -121,7 +121,7 @@ BillsPCMenu:
 	call LoadScreenTilesFromBuffer2DisableBGTransfer
 	coord hl, 0, 0
 	ld b, 10
-	ld c, 12
+	ld c, 14
 	call TextBoxBorder
 	coord hl, 2, 2
 	ld de, BillsPCMenuText
@@ -146,9 +146,9 @@ BillsPCMenu:
 	ld [wPlayerMonNumber], a
 	ld hl, WhatText
 	call PrintText
-	coord hl, 9, 14
+	coord hl, 11, 14
 	ld b, 2
-	ld c, 9
+	ld c, 7
 	call TextBoxBorder
 	ld a, [wCurrentBoxNum]
 	and $7f
@@ -164,7 +164,7 @@ BillsPCMenu:
 	add "1"
 .next
 	Coorda 18, 16
-	coord hl, 10, 16
+	coord hl, 12, 16
 	ld de, BoxNoPCText
 	call PlaceString
 	ld a, 1

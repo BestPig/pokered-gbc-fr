@@ -514,10 +514,10 @@ ShowPokedexDataInternal:
 	and a
 	jp z, .waitForButtonPress ; if the pokemon has not been owned, don't print the height, weight, or description
 	inc de ; de = address of feet (height)
-	ld a,[de] ; reads feet, but a is overwritten without being used
+	ld a, [de] ; reads feet, but a is overwritten without being used
 	push af
-	coord hl, 12, 6
-	lb bc, 1, 2
+	coord hl, 13, 6
+	lb bc, 1, 3
 	call PrintNumber ; print feet (height)
 	ld hl, $C426
 	pop af
@@ -535,7 +535,7 @@ ShowPokedexDataInternal:
 	push de
 ;	coord hl, 15, 6
 ;	lb bc, LEADING_ZEROES | 1, 2
-;	call PrintNumber ; print inches (height)
+;	call Printumber ; print inches (height)
 ;	ld a,$61 ; inches symbol tile (two ticks)
 ;	ld [hl],a
 ; now print the weight (note that weight is stored in tenths of pounds internally)
@@ -555,8 +555,8 @@ ShowPokedexDataInternal:
 	ld a, [de] ; a = lower byte of weight
 	ld [hl], a ; store lower byte of weight in [hDexWeight + 1]
 	ld de, hDexWeight
-	coord hl, 11, 8
-	lb bc, 2, 5 ; 2 bytes, 5 digits
+	coord hl, 12, 8
+	lb bc, 2, 4 ; 2 bytes, 4 digits
 	call PrintNumber ; print weight
 	coord hl, 14, 8
 	ld a, [hDexWeight + 1]
@@ -600,8 +600,9 @@ ShowPokedexDataInternal:
 	ld [rNR50], a
 	ret
 
-HeightWeightText: ; 40448 (10:4448)
-	db   "TAI  ???",$60,$4e,"PDS  ???",$61,$62,"@"
+HeightWeightText:
+	db   "TAI  ???", $60
+	next "PDS  ???", $61, $62, "@"
 
 ; XXX does anything point to this?
 PokeText:

@@ -347,7 +347,7 @@ StartMenu_Item:
 	ld hl, wTopMenuItemY
 	ld a, 11
 	ld [hli], a ; top menu item Y
-	ld a, 14
+	ld a, 13
 	ld [hli], a ; top menu item X
 	xor a
 	ld [hli], a ; current menu item ID
@@ -368,13 +368,13 @@ StartMenu_Item:
 	ld [wd11e], a
 	call GetItemName
 	call CopyStringToCF50 ; copy name to wcf50
-	ld a,[wcf91]
-	cp a,BICYCLE
-	jr nz,.notBicycle2
-	ld a,[wd732]
-	bit 5,a
-	jr z,.useItem_closeMenu
-	ld hl,CannotGetOffHereText
+	ld a, [wcf91]
+	cp a, BICYCLE
+	jr nz, .notBicycle2
+	ld a, [wd732]
+	bit 5, a
+	jr z, .useItem_closeMenu
+	ld hl, CannotGetOffHereText
 	call PrintText
 	jp ItemMenuLoop
 .notBicycle2
@@ -597,10 +597,10 @@ DrawTrainerInfo:
 	ld de, wPlayerName
 	call PlaceString
 	coord hl, 8, 4
-	ld de,wPlayerMoney
+	ld de, wPlayerMoney
 	ld c, $c3
 	call PrintBCDNumber
-	ld [hl],$f0
+	ld [hl], $f0
 	coord hl, 9, 6
 	ld de, wPlayTimeHours ; hours
 	lb bc, LEFT_ALIGN | 1, 3

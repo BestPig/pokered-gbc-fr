@@ -34,7 +34,7 @@ CeladonPrizeMenu:
 	bit 1, a ; keypress = B (Cancel)
 	jr nz, .noChoice
 	ld a, [wCurrentMenuItem]
-	cp 3 ; "NO,THANKS" choice
+	cp 3 ; "NON MERCI" choice
 	jr z, .noChoice
 	call HandlePrizeChoice
 .noChoice
@@ -153,7 +153,7 @@ PrintPrizePrice:
 	ld c, 7
 	call TextBoxBorder
 	call UpdateSprites
-	coord hl, 12, 0
+	coord hl, 13, 0
 	ld de, .CoinString
 	call PlaceString
 	coord hl, 13, 1
@@ -165,7 +165,7 @@ PrintPrizePrice:
 	call PrintBCDNumber
 	ret
 
-.CoinString
+.CoinString:
 	db "JETONS@"
 
 .SixSpacesString:

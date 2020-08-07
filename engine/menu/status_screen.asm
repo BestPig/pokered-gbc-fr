@@ -113,8 +113,8 @@ ELSE
 	lb bc, 6, 10
 ENDC
 	call DrawLineBox ; Draws the box around name, HP and status
-	coord hl, 2, 7
-	nop
+	ld de, -6
+	add hl, de
 	ld [hl], "⠄" ; . after No ("." is a different one)
 	dec hl
 	ld [hl], "№"
@@ -216,14 +216,14 @@ Type2Text:
 	db "TYPE2/", $4e
 
 IDNoText:
-	db $73, "№/", $4e
+	db "№",$73,"/", $4e
 
 OTText:
-	db   "OT/"
+	db   "DO/"
 	next "@"
 
 StatusText:
-	db "STATUS/@"
+	db "STATUT/@"
 
 OKText:
 	db "OK@"
@@ -339,7 +339,7 @@ ENDC
 	ld b, a ; Number of moves ?
 	coord hl, 11, 10
 	ld de, SCREEN_WIDTH * 2
-	ld a, $72 ; special P tile id
+	ld a, $8F ; special P tile id
 	call StatusScreen_PrintPP ; Print "PP"
 	ld a, b
 	and a

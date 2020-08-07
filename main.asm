@@ -208,7 +208,7 @@ ELSE
 TextBoxGraphics:                INCBIN "gfx/text_box.2bpp"
 TextBoxGraphicsEnd:
 ENDC
-PokedexTileGraphics:            INCBIN "gfx/pokedex.2bpp"
+PokedexTileGraphics:            INCBIN "gfx/pokedex.2bpp",$10,$120
 PokedexTileGraphicsEnd:
 WorldMapTileGraphics:           INCBIN "gfx/town_map.2bpp"
 WorldMapTileGraphicsEnd:
