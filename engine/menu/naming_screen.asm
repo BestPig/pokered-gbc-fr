@@ -503,7 +503,7 @@ PrintNamingText:
 	jp PlaceString
 
 YourTextString: ; 693f (1:693f)
-	db "VOTRE NOM?@"
+	db "VOTRE @"
 
 RivalsTextString: ; 6945 (1:6945)
 	db "NOM DU RIVAL?@"
